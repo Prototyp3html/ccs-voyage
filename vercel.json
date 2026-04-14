@@ -1,12 +1,11 @@
 {
-  "buildCommand": "npm run build && npm run vercel:prepare",
-  "routes": [
+  "framework": "vite",
+  "buildCommand": "npm run build && npm run vercel:html",
+  "outputDirectory": "dist/client",
+  "rewrites": [
     {
-      "handle": "filesystem"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/api/[...path]"
+      "source": "/(.*)",
+      "destination": "/index.html"
     }
   ]
 }
