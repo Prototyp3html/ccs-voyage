@@ -1,10 +1,5 @@
 {
   "buildCommand": "npm run build && npm run vercel:prepare",
-  "functions": {
-    "api/[[path]].ts": {
-      "runtime": "edge"
-    }
-  },
   "routes": [
     {
       "handle": "filesystem"
